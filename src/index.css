@@ -1,0 +1,965 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+/* @custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: var(--primary-border);
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: var(--secondary-border);
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: var(--muted-border);
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: var(--accent-border);
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: var(--destructive-border);
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-primary-border: var(--sidebar-primary-border);
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-accent-border: var(--sidebar-accent-border);
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+} */
+
+/* LIGHT MODE */
+/* :root {
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .08);
+
+  --background: 0 0% 100%;
+  --foreground: 224 71% 4%;
+  --border: 220 13% 91%;
+  --card: 0 0% 100%;
+  --card-foreground: 224 71% 4%;
+  --card-border: 220 13% 91%;
+  --sidebar: 220 20% 98%;
+  --sidebar-foreground: 224 71% 4%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-primary: 221 83% 53%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 220 14% 96%;
+  --sidebar-accent-foreground: 224 71% 4%;
+  --sidebar-ring: 221 83% 53%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 71% 4%;
+  --popover-border: 220 13% 91%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 224 71% 4%;
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 9% 46%;
+  --accent: 220 14% 96%;
+  --accent-foreground: 224 71% 4%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 220 13% 91%;
+  --ring: 221 83% 53%;
+  --chart-1: 221 83% 53%;
+  --chart-2: 142 71% 45%;
+  --chart-3: 38 92% 50%;
+  --chart-4: 291 64% 42%;
+  --chart-5: 0 84% 60%;
+
+  --app-font-sans: 'Inter', sans-serif;
+  --app-font-serif: Georgia, serif;
+  --app-font-mono: Menlo, monospace;
+  --radius: .5rem;
+  --shadow-2xs: 0px 1px 2px 0px hsl(220 13% 10% / 0.05);
+  --shadow-xs: 0px 1px 2px 0px hsl(220 13% 10% / 0.05);
+  --shadow-sm: 0px 1px 3px 0px hsl(220 13% 10% / 0.10), 0px 1px 2px -1px hsl(220 13% 10% / 0.06);
+  --shadow: 0px 1px 3px 0px hsl(220 13% 10% / 0.10), 0px 1px 2px -1px hsl(220 13% 10% / 0.06);
+  --shadow-md: 0px 4px 6px -1px hsl(220 13% 10% / 0.10), 0px 2px 4px -2px hsl(220 13% 10% / 0.06);
+  --shadow-lg: 0px 10px 15px -3px hsl(220 13% 10% / 0.10), 0px 4px 6px -4px hsl(220 13% 10% / 0.05);
+  --shadow-xl: 0px 20px 25px -5px hsl(220 13% 10% / 0.10), 0px 8px 10px -6px hsl(220 13% 10% / 0.05);
+  --shadow-2xl: 0px 25px 50px -12px hsl(220 13% 10% / 0.25);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+.dark {
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+  --opaque-button-border-intensity: 9;
+  --elevate-1: rgba(255,255,255, .04);
+  --elevate-2: rgba(255,255,255, .09);
+
+  --background: 224 71% 4%;
+  --foreground: 210 20% 98%;
+  --border: 215 27% 17%;
+  --card: 222 47% 7%;
+  --card-foreground: 210 20% 98%;
+  --card-border: 215 27% 17%;
+  --sidebar: 222 47% 7%;
+  --sidebar-foreground: 210 20% 98%;
+  --sidebar-border: 215 27% 17%;
+  --sidebar-primary: 217 91% 60%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 215 27% 17%;
+  --sidebar-accent-foreground: 210 20% 98%;
+  --sidebar-ring: 217 91% 60%;
+  --popover: 222 47% 7%;
+  --popover-foreground: 210 20% 98%;
+  --popover-border: 215 27% 17%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 215 27% 17%;
+  --secondary-foreground: 210 20% 98%;
+  --muted: 215 27% 17%;
+  --muted-foreground: 217 10% 64%;
+  --accent: 215 27% 17%;
+  --accent-foreground: 210 20% 98%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 215 27% 17%;
+  --ring: 217 91% 60%;
+  --chart-1: 217 91% 60%;
+  --chart-2: 142 71% 45%;
+  --chart-3: 38 92% 50%;
+  --chart-4: 291 64% 42%;
+  --chart-5: 0 72% 51%;
+
+  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.20);
+  --shadow-xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.20);
+  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.30), 0px 1px 2px -1px hsl(0 0% 0% / 0.20);
+  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.30), 0px 1px 2px -1px hsl(0 0% 0% / 0.20);
+  --shadow-md: 0px 4px 6px -1px hsl(0 0% 0% / 0.30), 0px 2px 4px -2px hsl(0 0% 0% / 0.20);
+  --shadow-lg: 0px 10px 15px -3px hsl(0 0% 0% / 0.30), 0px 4px 6px -4px hsl(0 0% 0% / 0.20);
+  --shadow-xl: 0px 20px 25px -5px hsl(0 0% 0% / 0.30), 0px 8px 10px -6px hsl(0 0% 0% / 0.20);
+  --shadow-2xl: 0px 25px 50px -12px hsl(0 0% 0% / 0.50);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+  }
+
+  .no-default-hover-elevate {}
+  .no-default-active-elevate {}
+
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  .border.toggle-elevate::before {
+    inset: -1px;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate),
+  .hover-elevate-2:not(.no-default-hover-elevate),
+  .active-elevate-2:not(.no-default-active-elevate) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: 999;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
+    inset: -1px;
+  }
+} */
+
+/* custom styling */ 
+
+/* START importing fonts */
+/* CREDIT FOR 'Libre Caslon Condensed' GOES TO ERTEKIN ERDIN */
+/* https://github.com/ertekinno/libre-caslon-condensed/tree/main */
+
+@font-face {
+  font-family: 'Libre Caslon Condensed';
+  src: url(./fonts/LibreCaslonCondensed-Italic.woff2) format('woff2');
+  font-style: italic; 
+  font-weight: 300; 
+}
+
+@font-face {
+  font-family: 'Libre Caslon Condensed';
+  src: url(./fonts/LibreCaslonCondensed-Regular.woff2) format('woff2');
+  font-style: normal; 
+  font-weight: 400; 
+}
+
+@font-face {
+  font-family: 'Libre Caslon Condensed';
+  src: url(./fonts/LibreCaslonCondensed-Medium.woff2) format('woff2');
+  font-style: normal; 
+  font-weight: 500; 
+}
+
+@font-face {
+  font-family: 'Libre Caslon Condensed';
+  src: url(./fonts/LibreCaslonCondensed-MediumItalic.woff2) format('woff2');
+  font-style: italic; 
+  font-weight: 500; 
+}
+
+@font-face {
+  font-family: 'Libre Caslon Condensed';
+  src: url(./fonts/LibreCaslonCondensed-SemiBold.woff2) format('woff2');
+  font-style: normal; 
+  font-weight: 600; 
+}
+
+@font-face {
+  font-family: 'Libre Caslon Condensed';
+  src: url(./fonts/LibreCaslonCondensed-SemiBoldItalic.woff2) format('woff2');
+  font-style: italic; 
+  font-weight: 600; 
+}
+
+/* END importing fonts */
+
+/* START general styling (icons/elements used throughout the whole site) */
+
+:root {
+  cursor: url("./components/customIcons/diamond-sparkles-cursor.png") 16 16, auto; /* do a spade icon? */
+  background-color: #F5F7F1; 
+}
+
+a {
+  border: 1px dotted #000; 
+  border-radius: 5px;
+  text-decoration: none; 
+  padding: .25rem .25rem .25rem .55rem; 
+}
+
+a:hover, a:focus {
+  border: 1.5px solid #000; 
+  font-weight: 500; 
+  background-color: #fff; 
+
+  .spadeClickIcon path {
+    fill: #000;
+  }
+}
+
+.spadeClickIcon {
+  display: inline-block; 
+  vertical-align: baseline; 
+}
+
+/* in liu of using interpunct */ 
+span.navIcons {
+  font-size: .5rem; 
+  vertical-align: middle; 
+}
+
+/* END general styling */ 
+
+body {
+  font-family: 'Libre Caslon Condensed', serif;
+}
+
+/* START not working rn — bounce animation */ 
+.introYBounce {
+  transform: rotate(0deg);
+}
+
+span .introYBounce:focus, 
+span .introYBounce:active {
+  transform: rotate(45deg);
+  transition: transform 0.3s cubic-bezier(0.3, 0.8, 0.3, 2.3);
+  /* transition: transform 1500ms linear(
+    0,
+    0.013 0.6%,
+    0.05 1.2%,
+    0.2 2.5%,
+    0.971 47.2%,
+    1.012 59.1%,
+    0.995 70.8%,
+    1
+  ); */
+}
+/* END not working rn — bounce animation */ 
+
+.introHeader {
+  font-style: normal; 
+  font-weight: 600; 
+  font-size: 5rem; 
+  line-height: 5rem; 
+  letter-spacing: -.1rem; 
+  margin: 2.5rem auto; 
+}
+
+.introDek {
+  color: #676767;
+  weight: 300; 
+  font-size: 1.5rem; 
+  max-width: 75vw; 
+  margin: 1rem auto; 
+  text-align: center; 
+}
+
+.introDekPartTwo {
+  color: #5F7539; 
+  font-style: italic;
+  font-weight: 500; 
+  letter-spacing: .05rem; 
+}
+
+/* START custom styling for CARDS section */ 
+
+.cardWrapper, .aboutWrapper, .workWrapper {
+  display: block; 
+  margin-bottom: 3rem; 
+}
+
+.cardContainer {
+  display: inline-block; 
+  width: 15rem;
+  height: 20rem;
+  margin: 1rem; 
+  /* perspective: 10px; */
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative; /* sides positioned relative to card */
+  transition: transform 0.5s ease; 
+  transform-style: preserve-3d;
+}
+
+/* .card p {
+  font-family: 'Libre Caslon Condensed', serif;
+  weight: 300; 
+  font-size: 1rem;
+  font-style: normal; 
+  margin: 0 auto; 
+} */
+
+.card:hover, .card:focus {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  border: 1.5px solid #000;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #fff;
+}
+
+.cardRole {
+  font-size: 1rem;
+  font-weight: 500; 
+  font-style: normal; 
+  line-height: 1; 
+}
+
+.flipInstruct {
+  font-size: .75rem;
+  font-style: italic; 
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.back ul {
+  font-size: .9rem; 
+  padding: 1rem; 
+}
+
+/* END custom styling for CARDS section */ 
+
+/* START custom styling for NAV section */
+
+.navMenu {
+  max-width: 75vw; 
+  margin: 0 auto; 
+  font-size: 1rem; 
+  line-height: 2.5rem;
+  padding-top: 1rem; 
+  padding-bottom: 2rem; 
+  
+  a {
+    white-space: nowrap; 
+  }
+
+  @media (max-width: 672px) {
+    max-width: 80vw; 
+    padding-top: 1rem; 
+    padding-bottom: 2rem; 
+  }
+}
+
+/* END custom styling for NAV section */
+
+.navHeader,
+.aboutHeader,
+.workHeader,
+.galleryHeader {
+  font-size: 3.5rem;
+  line-height: 4rem; 
+  font-weight: 500; 
+  margin: 0 auto; 
+
+  @media (max-width: 672px) {
+    max-width: 80vw; 
+    padding-bottom: 1rem; 
+  }
+}
+
+.aboutDesc, .workDesc {
+  padding-top: 1rem; 
+  margin: 0 auto; 
+  max-width: 75vw; 
+  font-size: 1.15rem; 
+  font-weight: 300; 
+}
+
+.aboutDesc, .workDesc p {
+  text-align: left; 
+  padding-bottom: 1rem; 
+}
+
+.navDisclaimer, .previewDesc {
+  margin: 0 auto; 
+  max-width: 75vw; 
+  font-family: serif; 
+  font-size: .85rem; 
+  line-height: 1.25rem; 
+  font-style: italic; 
+}
+
+.navDisclaimerLink {
+  border: 1px dotted #000;
+  border-radius: 5px;
+  padding: .25rem .25rem .25rem .55rem; 
+}
+
+/* special emphasis on what i currently do */
+.aboutDescCurrentRole {
+  line-height: 1.75; 
+  font-size: 1.5rem !important; 
+  padding-bottom: 1rem; 
+  word-wrap: break-word; 
+}
+
+.aboutDescCurrentRole a {
+  border: 1px dotted #000; 
+  font-size: 1.25rem; 
+}
+
+.aboutDescCurrentRole a:hover, a:focus {
+  border: 1.5px solid #000; 
+}
+
+.resumeLink {
+  line-height: 2; 
+}
+
+.resumeLink a {
+  border: 1.5px solid #5F7539; 
+  color: #5F7539; 
+}
+
+.resumeLink a:hover, .resumeLink a:focus {
+  color: #fff;
+  background-color: #819958; 
+
+  .spadeClickIcon path {
+    fill: #fff;
+    stroke: #fff; 
+  }
+}
+
+.workSubhed {
+  /* same settings as aboutDescCurrentRole */
+  line-height: 1.75; 
+  font-size: 1.5rem !important; 
+}
+
+.workDesc {
+  margin: 0 auto; 
+  text-align: center; 
+}
+
+/* previewWrapper contains both previewImgDescContainer and previewGifContainer */
+.previewWrapper {
+  max-width: 75vw;  
+  margin: 5rem auto; 
+  /* border: 1px solid black; */
+  position: relative; 
+}
+
+/* START styling for 'award' badge (awardSwap is in previewSwap component) */
+
+.awardContainer {
+  position: absolute;
+  top: -2rem;
+  left: 0rem; 
+  transform: rotate(45deg); 
+  font-size: 2.25rem; 
+}
+
+.awardContainer.container-0 {
+  top: 15vh;
+  left: 70vw; 
+}
+
+/* if more than one award */
+.awardContainer.container-1 {
+  top: 35vh;
+  left: 5vw; 
+
+  @media (max-width: 672px) {
+    top: 25vh;
+    left: -10vw; 
+  }
+}
+
+.awardContainer.container-2 {
+  top: 50vh;
+  left: 2vw; 
+
+  @media (max-width: 672px) {
+    top: 50vh;
+    left: -10vw; 
+  }
+}
+
+.awardContainer.container-3 {
+  top: 10rem;
+  left: -3rem; 
+
+  @media (max-width: 672px) {
+    top: 33vh;
+    left: 66vw; 
+  }
+}
+
+.awardContainer.container-4 {
+  top: 4rem;
+  left: 4rem; 
+
+  @media (max-width: 672px) {
+    top: 60vh;
+    left: 70vw; 
+  }
+}
+
+.awardContainer.container-5 {
+  top: 14rem;
+  left: 5rem; 
+}
+
+.award {
+  background-color: rgb(153, 172, 120);
+  /* border: 1px solid #99AC78; */
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  text-align: center;
+}
+.award:before,
+.award:after {
+  content: "👑";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4rem;
+  width: 4rem;
+  background-color: rgb(153, 172, 120);
+  /* border: 1px solid #99AC78; */
+}
+.award:before {
+  transform: rotate(-30deg);
+}
+.award:after {
+  transform: rotate(-60deg);
+}
+
+/* absolutely positioned, NOT relative to award */
+/* match position of container-{i} to text-{i} */
+.awardText {
+  color: #5F7539; 
+  max-width: 5rem; 
+  position: absolute;
+  top: -4.75rem;
+  left: -1.5rem; 
+  font-size: .65rem; 
+  line-height: 1.3;
+  transform: rotate(-15deg); 
+}
+
+.awardText.text-0 {
+  top: -4.75rem;
+  left: -1.5rem; 
+}
+
+.awardText.text-1 {
+  /* container-1 top: 5rem; left: -1.5rem; */
+  top: 2.25rem; 
+  left: -3rem; 
+}
+
+.awardText.text-2 {
+  /* container-2 top: 10rem; left: 2rem;  */
+  top: 7.5rem;
+  left: 0.5rem; 
+}
+
+.awardText.text-3 {
+  /* container-3 top: 10rem; left: -3rem;   */
+  top: 8rem;
+  left: -4rem; 
+}
+
+.awardText.text-4 {
+  /* container-4 top: 4rem; left: 4rem;   */
+  top: 1.25rem;
+  left: 2.5rem; 
+}
+
+.awardText.text-5 {
+  top: 14rem;
+  left: 5rem; 
+}
+
+/* absolutely positioned, NOT relative to award */
+.awardSwapText {
+  color: #5F7539; 
+  max-width: 5rem; 
+  position: absolute;
+  top: -4.75rem;
+  right: -3.25rem; 
+  font-size: .65rem; 
+  line-height: 1.3;
+  transform: rotate(15deg); 
+}
+
+/* END styling for 'award' badge */
+
+/* START styling for the actual mobile/desktop previews */ 
+
+.previewHed {
+  margin: 2.5rem auto; 
+  max-width: 75vw; 
+}
+
+.previewImgDescContainer {
+  max-width: 45vw;
+  display: inline-block; 
+
+  @media (max-width: 672px) {
+    max-width: 100vw; 
+  }
+}
+
+.previewImgContainer.three {
+  margin: 0 0 0 -10%; /* -10% is to center the description with the images */ 
+
+  @media (max-width: 672px) {
+    margin: 0 2.5% 0 -25%; /* -10% is to center the description with the images */ 
+  }
+}
+
+.previewImgContainer.five {
+  margin: 0 0 0 -20%; /* -20% is to center the description with the images */ 
+
+  @media (max-width: 672px) {
+    margin: 0 5% 0 -35%; /* -10% is to center the description with the images */ 
+  }
+}
+
+.previewImgContainer.six {
+  margin: 0 30% 0 5%;  
+
+  @media (max-width: 672px) {
+    margin: 0 12.5% 0 -30%; /* -10% is to center the description with the images */ 
+  }
+}
+
+.previewDesc {
+  font-family: serif; 
+  max-width: 30vw; 
+  padding-top: .5rem; 
+  margin: 0 auto; 
+  text-wrap: balance;
+  line-height: 1.5; 
+
+  @media (max-width: 672px) {
+    max-width: 75vw; 
+    text-wrap: balance; 
+    padding-bottom: 1.25rem; 
+  }
+
+  p {
+    text-align: center; 
+  }
+
+  .previewUrl {
+    margin: 0 -15rem;  
+    white-space: nowrap; 
+    text-align: center; 
+  }
+}
+
+.previewImgContainer img { 
+  border-radius: 10px; 
+  display: inline-block; 
+  max-width: 15vw;
+  filter: drop-shadow(#909090 0.1rem 0.1rem .1rem);
+
+  @media (max-width: 672px) {
+    max-width: 40vw;  
+  }
+}
+
+.three img {
+  margin-right: -10%; 
+
+  @media (max-width: 672px) {
+    margin-right: -25%; 
+  }
+}
+
+.five img { 
+  margin-right: -20%; 
+
+  @media (max-width: 672px) {
+    margin-right: -33.3%; 
+  }
+}
+
+.six img { 
+  margin-right: -45%; 
+
+  @media (max-width: 672px) {
+    margin-right: -40%; 
+  }
+}
+
+
+.previewImgContainer img:hover, img:active, img:focus { 
+  outline: 2.5px solid #7CA735; 
+}
+
+.previewImg:hover,
+.previewImg:focus { 
+  transition: margin-right 1s ease-out; 
+  margin-right: 0%; 
+}
+
+.previewGifContainer {
+  display: inline-block;
+  max-width: 25vw; 
+
+  @media (max-width: 672px) {
+    max-width: 100vw; 
+    padding-bottom: 1.25rem; 
+  }
+}
+
+.previewGif {
+  border-radius: 10px;
+  /* height: 100%;  */
+  max-width: 20vw;
+  /* filter: drop-shadow(#909090 0.1rem 0.1rem .1rem); */
+
+  @media (max-width: 672px) {
+    max-width: 75vw; 
+  }
+}
+
+/* to avoid vestibular motion triggers */
+/* IMPROVE */
+@media (prefers-reduced-motion: reduce) {
+  .previewImg:hover, previewImg:hover { 
+    transition: margin-right 3s ease-out; 
+    margin-right: 0%; 
+  }
+}
+
+/* END styling for the actual mobile/desktop previews */ 
+
+/* START styling gallery */
+
+.galleryWrapper {
+  padding-bottom: 2rem; 
+}
+
+.galleryGrid {
+  max-width: 90vw; 
+  margin: 0 auto; 
+  padding-top: 2rem; 
+
+  /* for the masonry effect, css only! */
+  column-width: 200px;
+  column-gap: 0.75rem;
+
+  > div + div {
+    margin-top: 0.75rem;
+  }
+
+  > div > img {
+    width: 100%;
+  }
+
+  .galleryGraphic {
+    position: relative; 
+  }
+
+  .galleryGraphicDesc {
+    font-family: serif; 
+    font-size: .75rem; 
+    text-align: center; 
+    padding-top: .25rem
+  }
+
+  .galleryGraphicUrl {
+    position: absolute; 
+    top: 5px;
+    left: 85%;
+
+    @media (max-width: 672px) {
+      left: 90%;
+    }
+  }
+}
+/* END styling gallery */
+
+.contactSection {
+  padding-bottom: 2rem;
+}
+
+.contactHeader {
+  font-size: 2.5rem;
+  line-height: 3.5rem; 
+  font-weight: 500; 
+  margin: 0 auto; 
+  max-width: 75vw; 
+  padding-bottom: 1rem; 
+
+  @media (max-width: 672px) {
+    max-width: 80vw; 
+    padding-bottom: 1rem; 
+  }
+}
+
+.backToNavLink {
+  font-family: serif;
+  font-size: .85rem; 
+  font-style: italic; 
+}
